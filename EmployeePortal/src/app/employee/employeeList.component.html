@@ -15,8 +15,8 @@
             <td>{{employee.code | uppercase}}</td>
             <td>{{employee.name}}</td>
             <td>{{employee.gender}}</td>
-            <td>{{employee.annualSalary}}</td>
-            <td>{{employee.dateOfBirth | date: 'fullDate' |uppercase}}</td>
+            <td>{{employee.annualSalary | currency: 'USD':true: '1.2-2'}}</td>
+            <td>{{employee.dateOfBirth | date: 'dd/MM/yyyy' |uppercase}}</td>
 
         </tr>
         <tr *ngIf="!employees || employees.length==0">
