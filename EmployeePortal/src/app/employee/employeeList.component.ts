@@ -37,5 +37,15 @@ export class EmployeeList {
             },
         ];
     }
+    getTotalEmployeesCount(): number {
+        return this.employees.length;
 
+    }
+    getTotalMaleEmployeesCount(): number {
+        return this.employees.filter(e=> e.gender === 'Male').length;
+
+    }
+    getTotalFemaleEmployeesCount(): number {
+        return this.employees.filter(e => e.gender === 'Female').length;
+    }
     }
