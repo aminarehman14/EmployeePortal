@@ -5,11 +5,11 @@ import { Component } from '@angular/core';
 
     selector: 'my-app',
     template: `
-
-<div> 
-<h1>{{pageHeader}}</h1>
-<my-employee></my-employee>
-</div>`
+                <div> 
+                    <h1>{{pageHeader}}</h1>
+                    <my-employee></my-employee>
+                </div>
+            `
 
 
 })
@@ -18,5 +18,5 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
 
-    pageHeader : string = "Employee Details";
+    pageHeader: string = "Employee Details";
 }
