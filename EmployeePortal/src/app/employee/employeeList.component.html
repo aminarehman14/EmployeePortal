@@ -1,4 +1,7 @@
-﻿<table>
+﻿
+<employee-count> </employee-count><br/>
+<br/>
+<table>
     <thead>
         <tr>
             <th>Code</th>
@@ -11,7 +14,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor='let employee of employees; trackBy: trackByEmpCode; let i=index; let isFirst=first; let isLast=last; let isEven=even; let isOdd=odd'>
+        <tr *ngFor='let employee of employees' >
             <td>{{employee.code | uppercase}}</td>
             <td>{{employee.name | employeeTitle:employee.gender}}</td>
             <td>{{employee.gender}}</td>
@@ -26,5 +29,3 @@
         </tr>
     </tbody>
 </table>
-<br/>
-<button (click)="getEmployees()">refresh Employees</button>

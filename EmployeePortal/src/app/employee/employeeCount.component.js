@@ -5,24 +5,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var EmployeeTitlePipe = (function () {
-    function EmployeeTitlePipe() {
+var EmployeeCount = /** @class */ (function () {
+    function EmployeeCount() {
+        this.all = 10;
+        this.male = 5;
+        this.female = 5;
     }
-    EmployeeTitlePipe.prototype.transform = function (value, gender) {
-        if (gender.toLowerCase() == 'male') {
-            return "Mr." + value;
-        }
-        else {
-            return "Miss." + value;
-        }
-    };
-    return EmployeeTitlePipe;
+    EmployeeCount = __decorate([
+        core_1.Component({
+            selector: 'employee-count',
+            templateUrl: 'app/employee/employeeCount.component.html',
+            styleUrls: ['app/employee/employeecount.component.css']
+        })
+    ], EmployeeCount);
+    return EmployeeCount;
 }());
-EmployeeTitlePipe = __decorate([
-    core_1.Pipe({
-        name: 'employeeTitle'
-    })
-], EmployeeTitlePipe);
-exports.EmployeeTitlePipe = EmployeeTitlePipe;
-//# sourceMappingURL=employeeTitle.pipe.js.map
+exports.EmployeeCount = EmployeeCount;
+//# sourceMappingURL=employeeCount.component.js.map
