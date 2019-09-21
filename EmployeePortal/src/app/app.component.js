@@ -5,28 +5,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var AppComponent = /** @class */ (function () {
+var AppComponent = (function () {
     function AppComponent() {
-        this.classesToApply = 'boldClass italicsClass';
-        this.applyBoldClass = true;
-        this.applyItalicsClass = true;
+        this.isBold = true;
+        this.fontSize = 30;
+        this.isItalic = true;
     }
-    AppComponent.prototype.addClasses = function () {
-        var classes = {
-            boldClass: this.applyBoldClass,
-            italicsClass: this.applyItalicsClass
+    AppComponent.prototype.addStyles = function () {
+        var styles = {
+            'font-size.px': this.fontSize,
+            'font-style': this.isItalic ? 'italic' : 'normal',
+            'font-weight': this.isBold ? 'bold' : 'normal',
         };
-        return classes;
+        return styles;
     };
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            template: "\n               <button class=\"colorClass\" [class]='classesToApply' >Button </button>\n<br/>\n<br/>\n               <button class=\"colorClass\" [class.boldClass]='applyBoldClass' >Button </button>\n<br/>\n<br/>\n               <button class=\"colorClass\" [ngClass]='addClasses()' >Button </button>\n\n"
-        })
-    ], AppComponent);
     return AppComponent;
 }());
+AppComponent = __decorate([
+    core_1.Component({
+        selector: 'my-app',
+        template: "\n<button style='color:red' [style.font-weight]=\"isBold? 'bold' : 'normal'\" > Button text </button>\n<br/>\n<br/>\n<button style='color: red' [style.font.size]=\"fontSize\">BUtton</button>\n<br/>\n<br/>\n<button style='color: red' [ngStyle]=\"addStyles()\">BUtton</button>\n\n\n\n"
+    })
+], AppComponent);
 exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.component.js.map
