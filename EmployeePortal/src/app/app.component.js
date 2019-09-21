@@ -8,24 +8,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
-        this.isBold = true;
-        this.fontSize = 30;
-        this.isItalic = true;
     }
-    AppComponent.prototype.addStyles = function () {
-        var styles = {
-            'font-size.px': this.fontSize,
-            'font-style': this.isItalic ? 'italic' : 'normal',
-            'font-weight': this.isBold ? 'bold' : 'normal',
-        };
-        return styles;
+    AppComponent.prototype.onClick = function () {
+        console.log("button click");
     };
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "\n<button style='color:red' [style.font-weight]=\"isBold? 'bold' : 'normal'\" > Button text </button>\n<br/>\n<br/>\n<button style='color: red' [style.font.size]=\"fontSize\">BUtton</button>\n<br/>\n<br/>\n<button style='color: red' [ngStyle]=\"addStyles()\">BUtton</button>\n\n\n\n"
+        template: "<my-employee></my-employee>"
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;

@@ -13,7 +13,13 @@ export class EmployeeComponent {
     firstName: string = 'John';
     lastName: string = 'Smith';
     gender: string = 'Male';
-    dob: string = '04141976';
+    dob: string = '04/14/1976';
+    showDetails: boolean = false;
+
+    toggleDetails(): void {
+        this.showDetails = !this.showDetails;
+
+    }
 
 
 }
