@@ -9,6 +9,7 @@
 
 
 export class EmployeeComponent {
+    columnSpan: number = 2;
     firstName: string = 'John';
     lastName: string = 'Smith';
     gender: string = 'Male';
