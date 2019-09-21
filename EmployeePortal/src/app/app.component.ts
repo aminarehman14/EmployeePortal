@@ -5,10 +5,15 @@ import { Component } from '@angular/core';
 
     selector: 'my-app',
     template: `
-                <div> 
-                    <my-employee></my-employee>
-                </div>
-            `
+               <button class="colorClass" [class]='classesToApply' >Button </button>
+<br/>
+<br/>
+               <button class="colorClass" [class.boldClass]='applyBoldClass' >Button </button>
+<br/>
+<br/>
+               <button class="colorClass" [ngClass]='addClasses()' >Button </button>
+
+`
 
 
 })
@@ -17,15 +22,16 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
 
-    pageHeader: string = 'Employee Details';
-    imagePath: string = 'https://i.pinimg.com/originals/7c/51/98/7c5198d2a0751fa76c8433dba4a1a12a.jpg';
-    firstName: string = 'Amina';
-    lastName: string = 'Rehman';
-    isDisabled: boolean = false;
+    classesToApply: string = 'boldClass italicsClass';
+    applyBoldClass: boolean = true;
+    applyItalicsClass: boolean = true;
 
-
-    getFullName(): string {
-
-        return this.firstName + ' ' + this.lastName
+    addClasses() {
+        let classes = {
+            boldClass: this.applyBoldClass,
+            italicsClass: this.applyItalicsClass
+        };
+        return classes;
+        }
     }
 }
