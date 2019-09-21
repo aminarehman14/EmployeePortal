@@ -6,8 +6,9 @@ import { Component } from '@angular/core';
     selector: 'my-app',
     template: `
                 <div> 
-                    <h1>{{pageHeader}}</h1>
-                    <my-employee></my-employee>
+                    <h1>{{getFullName()}}</h1>
+                <img src ='imagePath'/>    
+                <my-employee></my-employee>
                 </div>
             `
 
@@ -18,5 +19,13 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
 
-    pageHeader: string = "Employee Details";
+    pageHeader: string = null;
+
+    firstName: string = 'Amina';
+    lastName: string = 'Rehman';
+
+    getFullName(): string {
+
+        return this.firstName + ' ' +this.lastName
+    }
 }
