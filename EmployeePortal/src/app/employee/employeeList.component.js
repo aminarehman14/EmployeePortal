@@ -8,10 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var EmployeeList = /** @class */ (function () {
+var EmployeeList = (function () {
     function EmployeeList() {
+        this.selectedEmployeeCountRadioButton = 'All';
         this.employees = [
             {
                 code: 'emp101', name: 'Tom', gender: 'Male',
@@ -35,6 +35,9 @@ var EmployeeList = /** @class */ (function () {
             },
         ];
     }
+    EmployeeList.prototype.onEmployeeCountRadioButtonChange = function (selectedRadioButtonValue) {
+        this.selectedEmployeeCountRadioButton = selectedRadioButtonValue;
+    };
     EmployeeList.prototype.getTotalEmployeesCount = function () {
         return this.employees.length;
     };
@@ -44,15 +47,15 @@ var EmployeeList = /** @class */ (function () {
     EmployeeList.prototype.getTotalFemaleEmployeesCount = function () {
         return this.employees.filter(function (e) { return e.gender === 'Female'; }).length;
     };
-    EmployeeList = __decorate([
-        core_1.Component({
-            selector: 'list-employee',
-            templateUrl: 'app/employee/employeeList.component.html',
-            styleUrls: ['app/employee/employeeList.component.css']
-        }),
-        __metadata("design:paramtypes", [])
-    ], EmployeeList);
     return EmployeeList;
 }());
+EmployeeList = __decorate([
+    core_1.Component({
+        selector: 'list-employee',
+        templateUrl: 'app/employee/employeeList.component.html',
+        styleUrls: ['app/employee/employeeList.component.css']
+    }),
+    __metadata("design:paramtypes", [])
+], EmployeeList);
 exports.EmployeeList = EmployeeList;
 //# sourceMappingURL=employeeList.component.js.map
