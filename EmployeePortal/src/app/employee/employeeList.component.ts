@@ -1,5 +1,5 @@
-﻿import { Component } from '@angular/core';
-
+﻿import { Component, OnInit } from '@angular/core';
+import { IEmployee } from './employee';
 
 
 @Component({
@@ -11,7 +11,7 @@
 
 
 export class EmployeeList {
-    employees: any[];
+    employees: IEmployee[];
 
     selectedEmployeeCountRadioButton: string = 'All';
 
