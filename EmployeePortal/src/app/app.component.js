@@ -8,17 +8,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
-        this.name = 'Tom';
+        this.userText = 'Amina';
     }
-    AppComponent.prototype.onClick = function () {
-        console.log("button click");
-    };
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "\n<list-employee></list-employee>\n"
+        template: "Your Text: <input type='text' [(ngModel)]='userText'/>\n<br/><br/>\n<simple [simpleInput]='userText'>\n\n"
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;

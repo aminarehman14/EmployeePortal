@@ -1,23 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 
 
 @Component({
 
     selector: 'my-app',
-    template: `
-<list-employee></list-employee>
+    template: `Your Text: <input type='text' [(ngModel)]='userText'/>
+<br/><br/>
+<simple [simpleInput]='userText'>
+
 `
+
 })
 
 
 
 export class AppComponent {
-    name: string = 'Tom';
-
-
-    onClick(): void {
-
-    console.log("button click")}
-    
+    userText: string = 'Amina';
     }

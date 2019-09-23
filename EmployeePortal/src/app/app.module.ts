@@ -6,10 +6,12 @@ import { EmployeeComponent } from './employee/employee.component';
 import { EmployeeList } from './employee/employeeList.component';
 import { EmployeeTitlePipe } from './employee/employeeTitle.pipe';
 import { EmployeeCount } from './employee/employeeCount.component';
+import { SimpleComponent } from './Others/simple.component';
+
 
 @NgModule({
     imports: [BrowserModule, FormsModule],
-    declarations: [AppComponent, EmployeeComponent, EmployeeList, EmployeeTitlePipe, EmployeeCount
+    declarations: [AppComponent, EmployeeComponent, EmployeeList, EmployeeTitlePipe, EmployeeCount, SimpleComponent
     ],
   bootstrap:    [ AppComponent ]
 })
